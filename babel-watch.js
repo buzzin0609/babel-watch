@@ -384,7 +384,7 @@ function compile(filename, callback) {
   // Do not process config files since has already been done with the OptionManager
   // calls above and would introduce duplicates.
   opts.babelrc = false;
-  opts.sourceMaps = true;
+  opts.sourceMaps = 'inline';
   opts.ast = false;
 
   return babel.transformFile(filename, opts, (err, result) => {
